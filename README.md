@@ -1,7 +1,7 @@
 # GDPR Privacy Photo Filter
 ## De-identification of Photos
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
-De-identification and Tracking for Photos.
+De-identification and Ethical Bias Removal for Photos.
 
 ### Use Cases
 - GDPR Protection of Photo Sharing Compliance
@@ -14,7 +14,7 @@ What started out as a fix for GDPR violations, we will focus on testing for raci
 
 ### Roadmap
 
-#### v0.1 - Basic Direct Identifier Scrubbing
+#### v0.1 - Basic Direct Identifier Scrubbing - Done
 
 - Face Detect
 - Face Scrub
@@ -44,8 +44,8 @@ Scrub all identifying and data possible for bias from the dataset keeping a feat
 
 ### Process for Features
 
-What needs to be done:
-1. Scoping - Process, FaceDetect - InProgress Data Science Colab Testing, RandomFaceReplace, FaceScrub, MetaMark, AIMark, GetMetaMark, GetAIMark
+What needs to be done for roadmap Contribution:
+1. Scoping
 2. Test Implementation for AI Model pieces - Colab Notebook of Models with Validation Data
 3. Library wrapping and Implementation
 4. Library Publish
@@ -55,9 +55,13 @@ Tasks:
 - [x] Face Detect - Colab Testing - Included in the Notebook folder in the repo.
 - [X] Facescrub - Colab Testing - Simplest De-identification - Simple blur - Commonly available
 - [X] Face Location Extraction
-- [ ] Basic Library Object Implementation
-- [ ] v0.1 Release for George Floyd Implementation
-- [ ] Pose Extraction
+- [X] Basic Library Object Implementation
+- [X] v0.1 Release for basic Direct Identifiers
+- [ ] Pose Extraction Notebook
+- [ ] Essential Deidentified Photo Extraction
+- [ ] Detect Text
+- [ ] Scrub Text
+- [ ] v0.2 Release for George Floyd Implementation
 - [ ] Location and Meta Information Scrub
 - [ ] Race Scrub
 - [ ] MetaMark - Direct Implementation no datascience required
@@ -75,7 +79,7 @@ Tasks:
 - [ ] getAIMark - Retreive this secret marking
 
 
-## Installation - Not working yet
+## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Privy - Privacy Photo Filter library.
 
