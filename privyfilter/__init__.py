@@ -8,5 +8,5 @@ Photo Privacy Filter for GDPR compliant photo sharing and de-identification/bias
 
 
 
-__version__ = "0.1.14"
+__version__ = "0.1.15"
 __author__ = "Matthew Davis"

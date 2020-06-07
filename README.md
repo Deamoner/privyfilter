@@ -16,13 +16,13 @@ What started out as a fix for GDPR violations, we will focus on testing for raci
 
 #### v0.1 - Basic Direct Identifier Scrubbing - Done
 
-- Face Detect
+- Face Detect - Needs improvement
 - Face Scrub
 
-#### v0.2 - Full Deidentify Photo Process
+#### v0.2 - Identify other identifiers and bias features
 
-- Detect other possible identifiers - text etc
-- ScrubPIIText
+- Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
+- Detect Text
 - Pose Detect and Output Data
 - Deidentify - Output of only pose and facial feature data in photo
 
