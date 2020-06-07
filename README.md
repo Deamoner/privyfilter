@@ -33,12 +33,14 @@ removing or accomodating for unethical bias in data.
 
 #### v0.4 - Backtest/Unit Test Bias Dataset Creator
 
-- newFace - Morph thee existing faces into others - can generalize or specify a style transfer from our baseline
+- SyntheticFaceGenerate - Morph thee existing faces into others - can generalize or specify a style transfer from our baseline
+- SyntheticFaceReplace
 - genderDetect
 
 #### v0.5 - Backtest/Unit Test Bias Dataset Creator
 
 - createBalancedPhotoSet - Takes 1 photo and creates the balance extra number of photos near to remove bias from training.
+- sythethicGendersReplace
 
 ### Methodology
 
@@ -72,27 +74,6 @@ Tasks:
 - [ ] Fixes for face detection to
 - [ ] Basic pose and feature extraction for totally scrubbed photos
 - [ ] v0.2 Release for George Floyd Implementation
-- [ ] Detect Text
-- [ ] Scrub Text
-- [ ] Scrub Metadata 
-- [ ] v0.3 Release for George Floyd Implementation
-- [ ] Location and Meta Information Scrub
-- [ ] Race Scrub
-- [ ] MetaMark - Direct Implementation no datascience required
-- [ ] getMetaMarks - Direct Implementation
-- [ ] run - Runs the scanning for faces, scrubbing, and applies metamarks
-- [ ] v0.4 Release - Library can now take photos and auto De-id them
-
-
-- [ ] getPII - get's all the PII in text on the page
-- [ ] scrubPII - Will scrub the PII in the image - simple blur
-- [ ] Update run functions configs to utilize all functions
-- [ ] v0.8 Release - Automated Privacy Picture Scrubbing with Faces and text - handles most public access scenarios
-- [ ] RandomFaceReplace - Synthetic face generation for hidden in plain sight Privacy
-- [ ] alterPII - Simple word replacement for hidden in plain sight
-- [ ] v0.9 Release - Hidden in plain sight photo de-identification
-- [ ] AIMark - Mark through the pixels in a secret method a way to identify the source and downloader of the photo
-- [ ] getAIMark - Retreive this secret marking
 
 
 ## Installation
