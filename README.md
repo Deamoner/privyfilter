@@ -1,15 +1,15 @@
 # GDPR Privacy Photo Filter
 ## De-identification of Photos
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
-De-identification and Ethical Bias Removal for Photos.
+Filtering photos for privacy and bias for machine learning.
 
 ### Use Cases
 - GDPR Protection of Photo Sharing Compliance
 - Privacy for Machine Learning utilizing Photos
-- Ethical Machine Learning - Remove Race/Gender/Skincolor/Generalize
+- Ethical Machine Learning - Remove/Generalize Race/Gender/Skincolor/Generalize
 
-This repo brings the ability for privacy and removing unethical bias from machine learning.
-What started out as a fix for GDPR violations, we will focus on testing for racial and other characteristic bias.
+Privy filter is made to remove private data from photos and to give the method for
+removing or accomodating for unethical bias in data. 
 
 
 ### Roadmap
