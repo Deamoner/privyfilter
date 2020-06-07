@@ -1,7 +1,7 @@
 # GDPR Privacy Photo Filter
 ## De-identification of Photos
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
-Filtering photos for privacy and bias for machine learning.
+Filtering photos for privacy and bias(racial, gender) for machine learning.
 
 ### Use Cases
 - GDPR Protection of Photo Sharing Compliance
@@ -9,7 +9,7 @@ Filtering photos for privacy and bias for machine learning.
 - Ethical Machine Learning - Remove/Generalize Race/Gender/Skincolor/Generalize
 
 Privy filter is made to remove private data from photos and to give the method for
-removing or accomodating for unethical bias in data. 
+removing or accomodating for unethical bias in data.
 
 
 ### Roadmap
@@ -22,16 +22,23 @@ removing or accomodating for unethical bias in data.
 #### v0.2 - Identify other identifiers and bias features
 
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
-- Detect Text
-- Pose Detect and Output Data
-- Deidentify - Output of only pose and facial feature data in photo
+- AdjustSkin - Can adjust skincolor to generate new dataset photo
+- Fixes and Testing for faceDetect
 
 #### v0.3 - Backtest/Unit Test Bias Dataset Creator
 
-- RandomSkincolor
-- RandomFaceReplace
-- RandomAge
+- DetectText
+- ScrubText
+- Fixes for DetectSkin and AdjustSkin
 
+#### v0.4 - Backtest/Unit Test Bias Dataset Creator
+
+- newFace - Morph thee existing faces into others - can generalize or specify a style transfer from our baseline
+- genderDetect
+
+#### v0.5 - Backtest/Unit Test Bias Dataset Creator
+
+- createBalancedPhotoSet - Takes 1 photo and creates the balance extra number of photos near to remove bias from training.
 
 ### Methodology
 
@@ -40,6 +47,7 @@ Scrub all identifying and data possible for bias from the dataset keeping a feat
 1. PII Data Check
 2. DI(Direct Identifier) Scrubbing - Basic Privacy Preservation
 3. Remove Unethical Bias Data - Remove all features but Pose, Facial Expression
+4. Create alternatives synthetic photos for balanced training
 
 
 ### Process for Features
@@ -57,17 +65,25 @@ Tasks:
 - [X] Face Location Extraction
 - [X] Basic Library Object Implementation
 - [X] v0.1 Release for basic Direct Identifiers
-- [ ] Pose Extraction Notebook
-- [ ] Essential Deidentified Photo Extraction
+- [X] Pose Extraction Notebook
+- [X] Basic Skin Extraction
+- [ ] Improved SkinExtraction Protocol
+- [ ] Skin Adjustment Methodology
+- [ ] Fixes for face detection to
+- [ ] Basic pose and feature extraction for totally scrubbed photos
+- [ ] v0.2 Release for George Floyd Implementation
 - [ ] Detect Text
 - [ ] Scrub Text
-- [ ] v0.2 Release for George Floyd Implementation
+- [ ] Scrub Metadata 
+- [ ] v0.3 Release for George Floyd Implementation
 - [ ] Location and Meta Information Scrub
 - [ ] Race Scrub
 - [ ] MetaMark - Direct Implementation no datascience required
 - [ ] getMetaMarks - Direct Implementation
 - [ ] run - Runs the scanning for faces, scrubbing, and applies metamarks
-- [ ] v0.5 Release - Library can now take photos and auto De-id them
+- [ ] v0.4 Release - Library can now take photos and auto De-id them
+
+
 - [ ] getPII - get's all the PII in text on the page
 - [ ] scrubPII - Will scrub the PII in the image - simple blur
 - [ ] Update run functions configs to utilize all functions
