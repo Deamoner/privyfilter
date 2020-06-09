@@ -8,6 +8,7 @@ To do:
 
 import numpy as np
 import cv2
+from PIL import Image
 import os.path
 
 mydir = os.path.dirname(os.path.abspath(__file__))
@@ -60,3 +61,11 @@ class Privyfilter(object):
         for (x, y, w, h) in faces:
             color[y:y+h, x:x+w] = Privyfilter.anonymize_face(color[y:y+h, x:x+w])
         return color
+
+    #RemoveMetaData(imgPath)
+    def RemoveMetaData(imgPath)
+        image = Image.open(imgPath)
+        data = list(image.getdata())
+        image_without_exif = Image.new(image.mode, image.size)
+        image_without_exif.putdata(data)
+        return image_without_eexif
