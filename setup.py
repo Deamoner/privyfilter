@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="privyfilter",
-    version="0.1.15",
+    version="0.1.16",
     description="Privacy Photo filter for GDPR compliant photo sharing and machine learning without bias.",
     url="https://github.com/deamoner/privyfilter",
     author="Mattthew Davis AKa Deamoner",
@@ -17,7 +17,7 @@ setup(
     include_package_data=True,
     keywords="photo privacy de-identification anonymization",
     install_requires=["numpy>=1.18.4",
-    "opencv-python>=4.2.0.34", "PIL>=1.1.6"]
+    "opencv-python>=4.2.0.34", "Pillow>=7.1.2"]
 )
 classifiers=[
           "License :: OSI Approved :: MIT License",

@@ -28,7 +28,7 @@ class Privyfilter(object):
     #Method for loading the models and libraries for the object
     @staticmethod
     def faceScrub(imgPath):
-        filetest = os.path.isfile(imgPath)
+        #filetest = os.path.isfile(imgPath)
         #if image no good throw error
 
         img = cv2.imread(imgPath)
@@ -63,9 +63,9 @@ class Privyfilter(object):
         return color
 
     #RemoveMetaData(imgPath)
-    def RemoveMetaData(imgPath)
+    def RemoveMetaData(imgPath):
         image = Image.open(imgPath)
         data = list(image.getdata())
         image_without_exif = Image.new(image.mode, image.size)
         image_without_exif.putdata(data)
-        return image_without_eexif
+        return image_without_exif

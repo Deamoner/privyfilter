@@ -1,4 +1,7 @@
 from privyfilter.privyfilter import Privyfilter as pf
 
-faces, img = pf.faceScrub("../TestPics/1Person-Close.jpg")
+faces, imger = pf.faceScrub("../TestPics/1Person-Close.jpg")
 print(faces)
+img = pf.RemoveMetaData("../TestPics/1Person-Close.jpg")
+print(img)
+quit()
