@@ -19,6 +19,10 @@ removing or accomodating for unethical bias in data.
 - Face Detect - Needs improvement
 - Face Scrub
 
+#### v0.1.6 - Basic Meta Data Scrubber - Done
+
+- RemoveMetaData(imgPath) 
+
 #### v0.2 - Identify other identifiers and bias features
 
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
@@ -84,13 +88,19 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Privy -
 pip install privyfilter
 ```
 
-## Usage
+## Basic Usage
 
 ```python
 from privyfilter.privyfilter import Privyfilter as pf
 
 faces2, img = pf.faceScrub("../TestPics/1Person-Close.jpg")
 
+```
+
+## Scrub Meta Data
+```python
+from privyfilter.privyfilter import Privyfilter as pf
+img = pf.RemoveMetaData("../TestPics/1Person-Close.jpg")
 ```
 
 ## Deploying Module
