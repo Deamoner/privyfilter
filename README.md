@@ -11,7 +11,7 @@ Filtering photos for privacy and bias(racial, gender) for machine learning.
 Privy filter is made to remove private data from photos and to give the method for
 removing or accomodating for unethical bias in data.
 
-![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/tree/master/TestPics/privyfilter.jpg)
+![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
 
 ### Roadmap
 
