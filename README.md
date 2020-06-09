@@ -106,6 +106,7 @@ img = pf.RemoveMetaData("../TestPics/1Person-Close.jpg")
 ## Deploying Module
 
 ```
+python setup.py bdist_wheel --universal
 twine upload dist/*
 ```
 
