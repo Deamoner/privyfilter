@@ -12,6 +12,13 @@ Privy filter is made to remove private data from photos and to give the method f
 removing or accomodating for unethical bias in data.
 
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
+![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/dev/TestPics/pipeline.jpg)
+
+### Latest Release:
+v0.16 - RemoveMeta - Remove the Meta Data from photos 
+
+### Next Release
+v0.2 - Sythetic Face Generation and Face Swapping 
 
 ### Roadmap
 
@@ -24,13 +31,14 @@ removing or accomodating for unethical bias in data.
 
 - RemoveMetaData(imgPath)
 
-#### v0.2.0 - Identify main identifiers and replace
+#### v0.2.0 - Identify face and replace
 
 - getRandomFakeFace : get Random Synthetic Face
 - peopleObject - getFaceInfo
 - peopleObject - swapFace(img1, img2)
 
 #### v0.2.2 - Identify other identifiers and bias features
+
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
 - AdjustSkin - Can adjust skincolor to generate new dataset photo
 
@@ -78,10 +86,12 @@ Tasks:
 - [X] v0.1 Release for basic Direct Identifiers
 - [X] Pose Extraction Notebook
 - [X] Basic Skin Extraction
+- [X] Synthetic Face Generation 
+- [X] Face Swap Testing 
+- [ ] Face Swap Integration into main library 
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
-- [ ] Basic pose and feature extraction for totally scrubbed photos
 - [ ] v0.2 Release for George Floyd Implementation
 
 
