@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="privyfilter",
-    version="0.1.16",
+    version="0.2.0",
     description="Privacy Photo filter for GDPR compliant photo sharing and machine learning without bias.",
     url="https://github.com/deamoner/privyfilter",
     author="Mattthew Davis AKa Deamoner",

@@ -22,13 +22,17 @@ removing or accomodating for unethical bias in data.
 
 #### v0.1.6 - Basic Meta Data Scrubber - Done
 
-- RemoveMetaData(imgPath) 
+- RemoveMetaData(imgPath)
 
-#### v0.2 - Identify other identifiers and bias features
+#### v0.2.0 - Identify main identifiers and replace
 
+- getRandomFakeFace : get Random Synthetic Face
+- peopleObject - getFaceInfo
+- peopleObject - swapFace(img1, img2)
+
+#### v0.2.2 - Identify other identifiers and bias features
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
 - AdjustSkin - Can adjust skincolor to generate new dataset photo
-- Fixes and Testing for faceDetect
 
 #### v0.3 - Backtest/Unit Test Bias Dataset Creator
 
