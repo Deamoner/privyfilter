@@ -2,10 +2,13 @@ import cv2
 import dlib
 import numpy as np
 import os.path
+import gdown
+import zipfile
 
+#set local path for all initations
 mydir = os.path.dirname(os.path.abspath(__file__))
 config_path = os.path.abspath(os.path.join(mydir, "..", "Configs", "faceswap_shape_predictor_68_face_landmarks.dat"))
-face_cascade = cv2.CascadeClassifier(config_path)
+
 ## Face detection
 def face_detection(img,upsample_times=1):
     # Ask the detector to find the bounding boxes of each face. The 1 in the
@@ -16,8 +19,27 @@ def face_detection(img,upsample_times=1):
 
     return faces
 
+
 PREDICTOR_PATH = config_path
-predictor = dlib.shape_predictor(PREDICTOR_PATH)
+if os.path.isfile(config_path) != True:
+    print("Face Detection model will be downloaded...")
+
+    # zip https://drive.google.com/uc?id=1TGZq4ufg_0EBsDcMvzWMiC_61OMf1dgm
+    url = 'https://drive.google.com/uc?id=1TGZq4ufg_0EBsDcMvzWMiC_61OMf1dgm'
+
+    output = os.path.abspath(os.path.join(mydir, "..", "Configs", "faceswap_shape_predictor_68_face_landmarks.zip"))
+    gdown.download(url, output, quiet=False)
+
+    # unzip race_model_single_batch.zip
+    with zipfile.ZipFile(output, 'r') as zip_ref:
+        zip_ref.extractall(os.path.abspath(os.path.join(mydir, "..", "Configs")))
+
+if os.path.isfile(config_path) == True:
+    predictor = dlib.shape_predictor(config_path)
+else:
+    print("No Face Model Present")
+    print(config_path)
+
 ## Face and points detection
 def face_points_detection(img, bbox:dlib.rectangle):
     # Get the landmarks/parts for the face in box d.

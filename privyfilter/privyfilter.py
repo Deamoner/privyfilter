@@ -55,6 +55,7 @@ class Privyfilter(object):
                 (B, G, R) = [int(x) for x in cv2.mean(roi)[:3]]
                 cv2.rectangle(image, (startX, startY), (endX, endY), (B, G, R), -1)
         return image
+
     #Private Method for annoymizing the faces
     def find_and_blur(bw, color):
         face_cascade = cv2.CascadeClassifier(config_path)
