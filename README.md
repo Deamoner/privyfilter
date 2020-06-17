@@ -13,7 +13,7 @@ Privy filter is made to remove private data from photos and to give the method f
 removing or accomodating for unethical bias in data.
 
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
-![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/dev/TestPics/pipeline.jpg)
+![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/Results/pipeline.png)
 
 ### Latest Release:
 v0.16 - RemoveMeta - Remove the Meta Data from photos
