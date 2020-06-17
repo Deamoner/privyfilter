@@ -1,5 +1,6 @@
-# GDPR Privacy Photo Filter
-## De-identification of Photos
+# Photo Filter for racial/ethical bias
+## Remove or change attributes of photos the could cause bias or issue.
+## Create a balanced dataset for machine learning without compliance or ethical violations. 
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
 Filtering photos for privacy and bias(racial, gender) for machine learning.
 
@@ -15,10 +16,10 @@ removing or accomodating for unethical bias in data.
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/dev/TestPics/pipeline.jpg)
 
 ### Latest Release:
-v0.16 - RemoveMeta - Remove the Meta Data from photos 
+v0.16 - RemoveMeta - Remove the Meta Data from photos
 
 ### Next Release
-v0.2 - Sythetic Face Generation and Face Swapping 
+v0.2 - Sythetic Face Generation and Face Swapping
 
 ### Roadmap
 
@@ -86,9 +87,9 @@ Tasks:
 - [X] v0.1 Release for basic Direct Identifiers
 - [X] Pose Extraction Notebook
 - [X] Basic Skin Extraction
-- [X] Synthetic Face Generation 
-- [X] Face Swap Testing 
-- [ ] Face Swap Integration into main library 
+- [X] Synthetic Face Generation
+- [X] Face Swap Testing
+- [ ] Face Swap Integration into main library
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
