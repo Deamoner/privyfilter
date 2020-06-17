@@ -120,6 +120,25 @@ from privyfilter.privyfilter import Privyfilter as pf
 img = pf.RemoveMetaData("../TestPics/1Person-Close.jpg")
 ```
 
+## Face Swap - Inputs imgPath
+```python
+swapimg = pf.swapFaces("../TestPics/1Person-Close.jpg", "../TestPics/2Person-Close.jpg")
+cv2_imshow(swapimg)
+```
+
+## EndGoal API:
+   privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
+    returns array of faces and can include demographics. 
+   privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)
+    returns faces, and scrubbed img
+   privyfilter.swapFaces(img1Path, img2Path) or privyfilter.swapFaces(img1 cv2 object, img2 cv2 Object)
+    - replaces all faces in 2nd image with first. Returns new image as cv2 Object. 
+   privyfilter.getFakeFace() 
+    returns fakeface image object 
+   privyfilter.replaceFaces(img1)
+    returns img of all faces randomly replaced with fake ones.
+   
+
 ## Deploying Module
 
 ```
