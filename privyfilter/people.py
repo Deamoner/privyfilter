@@ -3,7 +3,8 @@ from thisapidoesnotexist import get_person
 import cv2
 import numpy as np
 import requests
-#import peoplemod
+from privyfilter.peoplemod import face_detection
+from privyfilter.peoplemod import face_swap
 
 class Holder(object):
     pass
