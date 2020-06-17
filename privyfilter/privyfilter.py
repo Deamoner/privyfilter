@@ -10,6 +10,7 @@ import numpy as np
 import cv2
 from PIL import Image
 import os.path
+from .people import People
 
 mydir = os.path.dirname(os.path.abspath(__file__))
 config_path = os.path.join(mydir, "Configs", "haarcascade_frontalface_default.xml")
@@ -69,3 +70,13 @@ class Privyfilter(object):
         image_without_exif = Image.new(image.mode, image.size)
         image_without_exif.putdata(data)
         return image_without_exif
+
+    def getFakeFace():
+        return People.getRandomFakeFace()
+
+    def swapFaces(imgPath1, imgPath2):
+        #TODO: Will need to be udpated to use in a pipeline instead of with file paths - this can be simple demo test implemtnation
+        img1 = cv2.imread(imgPath1)
+        img2 = cv2.imread(imgPath2)
+        finalPhoto = People.faceSwap(img1, img2)
+        return finalPhoto

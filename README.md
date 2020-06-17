@@ -1,5 +1,6 @@
-# GDPR Privacy Photo Filter
-## De-identification of Photos
+# Photo Filter for racial/ethical bias
+## Remove or change attributes of photos the could cause bias or issue.
+## Create a balanced dataset for machine learning without compliance or ethical violations. 
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
 Filtering photos for privacy and bias(racial, gender) for machine learning.
 
@@ -12,6 +13,13 @@ Privy filter is made to remove private data from photos and to give the method f
 removing or accomodating for unethical bias in data.
 
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
+![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/dev/TestPics/pipeline.jpg)
+
+### Latest Release:
+v0.16 - RemoveMeta - Remove the Meta Data from photos
+
+### Next Release
+v0.2 - Sythetic Face Generation and Face Swapping
 
 ### Roadmap
 
@@ -22,13 +30,18 @@ removing or accomodating for unethical bias in data.
 
 #### v0.1.6 - Basic Meta Data Scrubber - Done
 
-- RemoveMetaData(imgPath) 
+- RemoveMetaData(imgPath)
 
-#### v0.2 - Identify other identifiers and bias features
+#### v0.2.0 - Identify face and replace
+
+- getRandomFakeFace : get Random Synthetic Face
+- peopleObject - getFaceInfo
+- peopleObject - swapFace(img1, img2)
+
+#### v0.2.2 - Identify other identifiers and bias features
 
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
 - AdjustSkin - Can adjust skincolor to generate new dataset photo
-- Fixes and Testing for faceDetect
 
 #### v0.3 - Backtest/Unit Test Bias Dataset Creator
 
@@ -74,10 +87,12 @@ Tasks:
 - [X] v0.1 Release for basic Direct Identifiers
 - [X] Pose Extraction Notebook
 - [X] Basic Skin Extraction
+- [X] Synthetic Face Generation
+- [X] Face Swap Testing
+- [ ] Face Swap Integration into main library
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
-- [ ] Basic pose and feature extraction for totally scrubbed photos
 - [ ] v0.2 Release for George Floyd Implementation
 
 

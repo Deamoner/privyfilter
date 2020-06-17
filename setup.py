@@ -5,19 +5,19 @@ with open("README.md", "r") as f:
 
 setup(
     name="privyfilter",
-    version="0.1.16",
-    description="Privacy Photo filter for GDPR compliant photo sharing and machine learning without bias.",
+    version="0.2.43",
+    description="Photo filter for decreasing bias in photo datasets by generating synthetic matching photos",
     url="https://github.com/deamoner/privyfilter",
     author="Mattthew Davis AKa Deamoner",
     author_email="mdavis@virtustructure.com",
     license="MIT",
     packages=["privyfilter"],
     package_directory={"privyfilter":"privyfilter/"},
-    package_data={'privyfilter': ['Configs/*.xml']},
+    package_data={'privyfilter': ['Configs/*.*', 'peoplemod/*']},
     include_package_data=True,
-    keywords="photo privacy de-identification anonymization",
+    keywords="photo sythetic bias privacy de-identification anonymization",
     install_requires=["numpy>=1.18.4",
-    "opencv-python>=4.2.0.34", "Pillow>=7.1.2"]
+    "opencv-python>=4.2.0.34", "Pillow>=7.1.2","thisapidoesnotexist>=0.2"]
 )
 classifiers=[
           "License :: OSI Approved :: MIT License",
