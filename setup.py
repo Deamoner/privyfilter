@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="privyfilter",
-    version="0.2.0",
+    version="0.2.43",
     description="Photo filter for decreasing bias in photo datasets by generating synthetic matching photos",
     url="https://github.com/deamoner/privyfilter",
     author="Mattthew Davis AKa Deamoner",
@@ -13,7 +13,7 @@ setup(
     license="MIT",
     packages=["privyfilter"],
     package_directory={"privyfilter":"privyfilter/"},
-    package_data={'privyfilter': ['Configs/*.xml', 'peoplemod/*']},
+    package_data={'privyfilter': ['Configs/*.*', 'peoplemod/*']},
     include_package_data=True,
     keywords="photo sythetic bias privacy de-identification anonymization",
     install_requires=["numpy>=1.18.4",

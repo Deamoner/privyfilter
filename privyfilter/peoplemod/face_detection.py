@@ -1,7 +1,11 @@
 import cv2
 import dlib
 import numpy as np
+import os.path
 
+mydir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.abspath(os.path.join(mydir, "..", "Configs", "faceswap_shape_predictor_68_face_landmarks.dat"))
+face_cascade = cv2.CascadeClassifier(config_path)
 ## Face detection
 def face_detection(img,upsample_times=1):
     # Ask the detector to find the bounding boxes of each face. The 1 in the
@@ -12,7 +16,7 @@ def face_detection(img,upsample_times=1):
 
     return faces
 
-PREDICTOR_PATH = 'models/shape_predictor_68_face_landmarks.dat'
+PREDICTOR_PATH = config_path
 predictor = dlib.shape_predictor(PREDICTOR_PATH)
 ## Face and points detection
 def face_points_detection(img, bbox:dlib.rectangle):
