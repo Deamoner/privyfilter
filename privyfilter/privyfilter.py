@@ -29,15 +29,36 @@ class Privyfilter(object):
     #Method for loading the models and libraries for the object
     @staticmethod
     def faceScrub(imgPath):
+        #TODO: Change if to have option of sending cv2 object
         #filetest = os.path.isfile(imgPath)
         #if image no good throw error
-
-        img = cv2.imread(imgPath)
+        if os.path.isfile(imgPath) != True:
+            #no file present
+            if isinstance(imgPath, cv2):
+                img = imgPath
+            else:
+                exit("No file or cv2 Object Present.")
+        else:
+            img = cv2.imread(imgPath)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(img, 1.3, 5)
         anonyimage = Privyfilter.find_and_blur(gray, img)
         return faces, anonyimage
 
+    # Method for return face box coordinates boxes
+    @staticmethod
+    def findFaces(imgPath):
+        if os.path.isfile(imgPath1) != True:
+            #no file present
+            if isinstance(imgPath, cv2):
+                img = imgPath
+            else:
+                exit("No file or cv2 Object Present.")
+        else:
+            img = cv2.imread(imgPath)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(img, 1.3, 5)
+        return faces
 
     #Method for annoymizing the faces
     @staticmethod
@@ -57,6 +78,7 @@ class Privyfilter(object):
         return image
 
     #Private Method for annoymizing the faces
+    @staticmethod
     def find_and_blur(bw, color):
         face_cascade = cv2.CascadeClassifier(config_path)
         faces = face_cascade.detectMultiScale(bw, 1.1, 4)
@@ -65,19 +87,50 @@ class Privyfilter(object):
         return color
 
     #RemoveMetaData(imgPath)
+    @staticmethod
     def RemoveMetaData(imgPath):
+        #error checking
+        if os.path.isfile(imgPath) != True:
+            exit("File does not exist.")
         image = Image.open(imgPath)
         data = list(image.getdata())
         image_without_exif = Image.new(image.mode, image.size)
         image_without_exif.putdata(data)
         return image_without_exif
 
+    @staticmethod
     def getFakeFace():
         return People.getRandomFakeFace()
 
+    #swap faces between only two iamges
+    @staticmethod
     def swapFaces(imgPath1, imgPath2):
-        #TODO: Will need to be udpated to use in a pipeline instead of with file paths - this can be simple demo test implemtnation
-        img1 = cv2.imread(imgPath1)
-        img2 = cv2.imread(imgPath2)
+
+        if os.path.isfile(imgPath1) != True:
+            #no file present
+            if isinstance(imgPath1, cv2):
+                img1 = imgPath1
+            else:
+                exit("No file or cv2 Object Present.")
+        else:
+            img1 = cv2.imread(imgPath1)
+        if os.path.isfile(imgPath2) != True:
+            # no file present
+            if isinstance(imgPath2, cv2):
+                img2 = imgPath2
+            else:
+                exit("No file or cv2 Object Present.")
+        else:
+            img2 = cv2.imread(imgPath2)
         finalPhoto = People.faceSwap(img1, img2)
         return finalPhoto
+
+    #function to utilize
+    @staticmethod
+    def replaceFacesFake(self, imgPath1):
+        #TODO: findallfaces, genfakefaces, segment faces, swapFace, return phot
+        #find all faces and segmetn
+        faces = self.findFaces(imgPath1)
+        print(faces)
+        return 1
+

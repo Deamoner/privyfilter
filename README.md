@@ -15,6 +15,8 @@ removing or accomodating for unethical bias in data.
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/Results/pipeline.png)
 
+
+
 ### Latest Release:
 v0.16 - RemoveMeta - Remove the Meta Data from photos
 
@@ -32,7 +34,7 @@ v0.2 - Sythetic Face Generation and Face Swapping
 
 - RemoveMetaData(imgPath)
 
-#### v0.2.0 - Identify face and replace
+#### v0.2.0 - Identify face and replace - Alpha - Cleaning up the code.
 
 - getRandomFakeFace : get Random Synthetic Face - done - needs tmp folder setting
 - peopleObject - getFaceInfo - done - face model not loading on
@@ -66,9 +68,15 @@ v0.2 - Sythetic Face Generation and Face Swapping
 Scrub all identifying and data possible for bias from the dataset keeping a featureset that still allows for useful machine learning.
 
 1. Identify Features - Faces, People
-2. Remove Unethical Bias Data - New Faces
+2. Remove Unethical Bias Data - New Synthetic Faces, Adjust Skin
 3. Create alternatives synthetic photos for balanced training
 
+## References Work
+
+- https://towardsdatascience.com/survey-d4f168791e57
+- https://brie.berkeley.edu/sites/default/files/brie_wp_2018-3.pdf
+- https://www.brookings.edu/research/algorithmic-bias-detection-and-mitigation-best-practices-and-policies-to-reduce-consumer-harms/
+- https://healthitanalytics.com/news/eliminating-racial-bias-in-algorithm-development
 
 ### Process for Features
 
@@ -90,7 +98,9 @@ Tasks:
 - [X] Synthetic Face Generation
 - [X] Face Swap Testing
 - [X] Face Swap Integration into main library
-- [ ] Fixes for model automated download
+- [X] Fixes for model automated download
+- [X] Clean up API for people and privyfilter library to match specs.
+- [ ] Replace Faces - Replace all faces in photos
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
@@ -137,7 +147,6 @@ cv2_imshow(swapimg)
     - returns fakeface image object
    - privyfilter.replaceFaces(img1)
     - returns img of all faces randomly replaced with fake ones.
-
 
 ## Deploying Module
 
