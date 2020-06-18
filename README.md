@@ -99,7 +99,7 @@ Tasks:
 - [X] Face Swap Testing
 - [X] Face Swap Integration into main library
 - [X] Fixes for model automated download
-- [ ] Clean up API for people and privyfilter library to match specs.
+- [X] Clean up API for people and privyfilter library to match specs.
 - [ ] Replace Faces - Replace all faces in photos
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
@@ -137,17 +137,16 @@ cv2_imshow(swapimg)
 ```
 
 ## EndGoal API:
-   privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
-    returns array of faces and can include demographics.
-   privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)
-    returns faces, and scrubbed img
-   privyfilter.swapFaces(img1Path, img2Path) or privyfilter.swapFaces(img1 cv2 object, img2 cv2 Object)
+   - privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
+    - returns array of faces and can include demographics.
+   - privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)
+    - returns faces, and scrubbed img
+   - privyfilter.swapFaces(img1Path, img2Path) or privyfilter.swapFaces(img1 cv2 object, img2 cv2 Object)
     - replaces all faces in 2nd image with first. Returns new image as cv2 Object.
-   privyfilter.getFakeFace()
-    returns fakeface image object
-   privyfilter.replaceFaces(img1)
-    returns img of all faces randomly replaced with fake ones.
-
+   - privyfilter.getFakeFace()
+    - returns fakeface image object
+   - privyfilter.replaceFaces(img1)
+    - returns img of all faces randomly replaced with fake ones.
 
 ## Deploying Module
 
