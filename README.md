@@ -1,6 +1,6 @@
 # Photo Filter for racial/ethical bias
 ### Remove or change attributes of photos the could cause bias or issue.
-### Create a balanced dataset for machine learning without compliance or ethical violations. 
+### Create a balanced dataset for machine learning without compliance or ethical violations.
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
 Filtering photos for privacy and bias(racial, gender) for machine learning.
 
@@ -18,7 +18,7 @@ removing or accomodating for unethical bias in data.
 ### Latest Release:
 v0.16 - RemoveMeta - Remove the Meta Data from photos
 
-### Next Release - alpha - bugs in loading the model 
+### Next Release - alpha - bugs in loading the model
 v0.2 - Sythetic Face Generation and Face Swapping
 
 ### Roadmap
@@ -35,8 +35,8 @@ v0.2 - Sythetic Face Generation and Face Swapping
 #### v0.2.0 - Identify face and replace
 
 - getRandomFakeFace : get Random Synthetic Face - done - needs tmp folder setting
-- peopleObject - getFaceInfo - done - face model not loading on 
-- peopleObject - swapFace(img1, img2) - 
+- peopleObject - getFaceInfo - done - face model not loading on
+- peopleObject - swapFace(img1, img2) -
 
 #### v0.3.0 - Identify other identifiers and bias features
 
@@ -45,7 +45,7 @@ v0.2 - Sythetic Face Generation and Face Swapping
 
 #### v0.3 - Direct Aging
 
-- Test Face Aging Algo 
+- Test Face Aging Algo
 - Test Gender Changing Algo
 - Testing Race Direct Synthetic Style Transfer
 - Fixes for DetectSkin and AdjustSkin
@@ -58,8 +58,8 @@ v0.2 - Sythetic Face Generation and Face Swapping
 
 #### v0.5 - Improve Accuracy and Speed
 
-- Baseline of Full Pipeline per Photo 
-- 
+- Baseline of Full Pipeline per Photo
+-
 
 ### Methodology
 
@@ -90,7 +90,7 @@ Tasks:
 - [X] Synthetic Face Generation
 - [X] Face Swap Testing
 - [X] Face Swap Integration into main library
-- [ ] Fixes for model automated download 
+- [ ] Fixes for model automated download
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
@@ -127,17 +127,17 @@ cv2_imshow(swapimg)
 ```
 
 ## EndGoal API:
-   privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
-    returns array of faces and can include demographics. 
-   privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)
-    returns faces, and scrubbed img
-   privyfilter.swapFaces(img1Path, img2Path) or privyfilter.swapFaces(img1 cv2 object, img2 cv2 Object)
-    - replaces all faces in 2nd image with first. Returns new image as cv2 Object. 
-   privyfilter.getFakeFace() 
-    returns fakeface image object 
-   privyfilter.replaceFaces(img1)
-    returns img of all faces randomly replaced with fake ones.
-   
+   - privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
+    - returns array of faces and can include demographics.
+   - privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)
+    - returns faces, and scrubbed img
+   - privyfilter.swapFaces(img1Path, img2Path) or privyfilter.swapFaces(img1 cv2 object, img2 cv2 Object)
+    - replaces all faces in 2nd image with first. Returns new image as cv2 Object.
+   - privyfilter.getFakeFace()
+    - returns fakeface image object
+   - privyfilter.replaceFaces(img1)
+    - returns img of all faces randomly replaced with fake ones.
+
 
 ## Deploying Module
 
