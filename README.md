@@ -1,16 +1,20 @@
 # Photo Filter for racial/ethical bias
-### Remove or change attributes of photos the could cause bias or issue.
-### Create a balanced dataset for machine learning without compliance or ethical violations.
-## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
-Filtering photos for privacy and bias(racial, gender) for machine learning.
+### Filtering photos for bias(racial, gender) for machine learning.
+### Privy filter is your photo dataset augmentor and analyzer for unethical bias(Race, Gender, Age)
+## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/) - [Privy Filter Demo](https://privyfilter.herokuapp.com/)
+Filtering photos for bias(racial, gender) for machine learning.
+
+### Demo
+
+Privy Filter: [Info and Demo Site](https://privyfilter.herokuapp.com/)
 
 ### Use Cases
-- GDPR Protection of Photo Sharing Compliance
-- Privacy for Machine Learning utilizing Photos
-- Ethical Machine Learning - Remove/Generalize Race/Gender/Skincolor/Generalize
+- Train Machine Learning Models minimizing unethical bias inherent in underlying photo dataset - IE Race, Gender, Age Discrimination
+- Data Augmentation of Photo datasets to balance unethical data bias
+- Create and Identify Unit Test Photos for datasets to ensure continual testing of bias in classification type problems
+- Ethical Machine Learning - Remove Identity/Generalize Identinity/Generalize Race/Gender/Skincolor/Generalize
 
-Privy filter is made to remove private data from photos and to give the method for
-removing or accomodating for unethical bias in data.
+Privy filter is your photo dataset augmentor and analyzer for unethical bias(Race, Gender, Age)
 
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/TestPics/privyfilter.jpg)
 ![privyfilter detect and blurr faces](https://github.com/Deamoner/privyfilter/raw/master/Results/pipeline.png)
@@ -18,9 +22,6 @@ removing or accomodating for unethical bias in data.
 
 
 ### Latest Release:
-v0.16 - RemoveMeta - Remove the Meta Data from photos
-
-### Next Release - alpha - bugs in loading the model
 v0.2 - Sythetic Face Generation and Face Swapping
 
 ### Roadmap
@@ -34,33 +35,49 @@ v0.2 - Sythetic Face Generation and Face Swapping
 
 - RemoveMetaData(imgPath)
 
-#### v0.2.0 - Identify face and replace - Alpha - Cleaning up the code.
+#### v0.2.0 - Identify face and replace - Done
 
 - getRandomFakeFace : get Random Synthetic Face - done - needs tmp folder setting
 - peopleObject - getFaceInfo - done - face model not loading on
-- peopleObject - swapFace(img1, img2) -
+- peopleObject - swapFace(img1, img2)
 
-#### v0.3.0 - Identify other identifiers and bias features
+#### v0.3.0 - ProcessAll and Use Case Direct Finishing
+
+- processOne() - review demographics of current photo - suggest additional photos
+- generatePhoto - from one photo and demographic info - generate those new photo demographic utilizing synthetic faces
+- processDir() - process all the photos in the directory - first calculate the statistics and distributions - and parameterize a directory to save all sythetic balanced photos.
+- Update DemoSite with Use Case direct notes and usability examples
+
+#### v0.4.0 - Identify other identifiers and bias features
 
 - Detect skin - Dataset: http://cs-chan.com/downloads_skin_dataset.html
 - AdjustSkin - Can adjust skincolor to generate new dataset photo
+- Update processone stats and generatephoto to utilize skincolor data and manipulation
+- Update demosite with video
+- Demo of CelebA Dataset
 
-#### v0.3 - Direct Aging
+#### v0.5 - Direct Aging and Gender
 
 - Test Face Aging Algo
 - Test Gender Changing Algo
 - Testing Race Direct Synthetic Style Transfer
 - Fixes for DetectSkin and AdjustSkin
 
-#### v0.4 - Full Balanced Dataset Creator
+#### v0.6 - Improve/Increase Original Photoset data quality retention through improve synthetic matching
 
-- Update Accuracy of getDemographics
-- CreateBalancedPhotos(img)
--
+- Face pose matching for synthetic face replacement
+- Review accuracy of underlying demographic model
+- New CelebA Demo
 
-#### v0.5 - Improve Accuracy and Speed
+#### v0.7 - Increase compatibility of pipeline for photosets
 
-- Baseline of Full Pipeline per Photo
+- Support for multi face photo - Scoping - Document API updates
+- Support for people but no face in photos - recognize poses without faces
+
+#### v0.8 - Reliability Fixes
+
+- Back to baseline of usecase documentation
+- Use Case Automated Testing
 -
 
 ### Methodology
@@ -68,7 +85,7 @@ v0.2 - Sythetic Face Generation and Face Swapping
 Scrub all identifying and data possible for bias from the dataset keeping a featureset that still allows for useful machine learning.
 
 1. Identify Features - Faces, People
-2. Remove Unethical Bias Data - New Synthetic Faces, Adjust Skin
+2. Remove Unethical Bias Data - New Synthetic Faces, Adjust Skin, Gender and Age Transformation
 3. Create alternatives synthetic photos for balanced training
 
 ## References Work
@@ -100,7 +117,10 @@ Tasks:
 - [X] Face Swap Integration into main library
 - [X] Fixes for model automated download
 - [X] Clean up API for people and privyfilter library to match specs.
-- [ ] Replace Faces - Replace all faces in photos
+- [X] Replace Faces - Replace a face in a photo
+- [ ] Scope out API for calculation and methodology of race/gender face demographic balancing
+- [ ] Functions to process one photo for demographics and balanced demographics needed return
+- [ ] Function generateSytheticPhoto - create the photo required
 - [ ] Improved SkinExtraction Protocol
 - [ ] Skin Adjustment Methodology
 - [ ] Fixes for face detection to
@@ -137,6 +157,9 @@ cv2_imshow(swapimg)
 ```
 
 ## EndGoal API:
+   - privyfilter.processDir(srcPath, dstPath) - analyze all photos for demographics in srcdirect, if dstdirect - generate the balanced dataset)
+   - privyfilter.processOne(srcPath, dstPath) - analyze photo and suggest demographics of balanced photo dataset - if dstpath then generate
+   - privyfilter.generatePhoto(srcPhoto, demographic, dstPath) - generate a photo from the original with the demographic params specified  
    - privyfilter.findFaces(imgpath, demographics=false) or privyfilter.findFaces(cv2 object)
     - returns array of faces and can include demographics.
    - privyfilter.scrubFaces(imgPath) or privyfilter.scrubFaces(cv2 object)

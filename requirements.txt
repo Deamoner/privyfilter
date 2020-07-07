@@ -1,0 +1,15 @@
+boost==0.1
+cmake==0.7.1
+boost-py
+dlib>=19.3.0
+scipy
+gunicorn
+Jinja2
+peewee
+uuid
+Werkzeug
+thisapidoesnotexist
+deepface
+cv2
+numpy
+requests
